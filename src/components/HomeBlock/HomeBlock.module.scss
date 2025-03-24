@@ -1,0 +1,15 @@
+.home {
+    display: flex;
+    justify-content: center;
+
+
+    .homeFlex {
+        border: 3px solid red;
+        color: red;
+        background-color: gold;
+        border-radius: 10px;
+        font-size: 3rem;
+        margin-top: 50px;
+        padding: 10px;
+    }
+}

@@ -1,9 +1,16 @@
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import TaskList from "./pages/TaskList";
+import Header from "./components/Header";
+import HomeBlock from "./components/HomeBlock";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <HomeBlock />
+      <Routes><Route path="/" element={<Header />} />
+        <Route path="/tasklist" element={<TaskList />} />
+      </Routes>
     </div>
   );
 }
