@@ -1,12 +1,14 @@
 .wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     .textTask {
         border: 3px solid black;
         border-radius: 10px;
         font-size: 3rem;
-        margin-top: 50px;
+        margin-top: 30px;
         padding: 10px;
     }
 }

@@ -3,13 +3,16 @@ import "./App.css";
 import TaskList from "./pages/TaskList";
 import Header from "./components/Header";
 import HomeBlock from "./components/HomeBlock";
+import WebSite from "./pages/WebSite";
 
 function App() {
   return (
     <div className="App">
       <HomeBlock />
-      <Routes><Route path="/" element={<Header />} />
+      <Routes>
+        <Route path="/" element={<Header />} />
         <Route path="/tasklist" element={<TaskList />} />
+        <Route path="/website" element={<WebSite />} />
       </Routes>
     </div>
   );
