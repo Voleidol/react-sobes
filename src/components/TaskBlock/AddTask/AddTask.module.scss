@@ -54,3 +54,39 @@
     display: block;
     margin-top: 20px;
 }
+
+.divInput label{
+    font-size: 20px;
+}
+
+// styles.module.scss
+.calendar {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .calendar .react-calendar {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .calendar .react-calendar__tile--active {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .calendar .react-calendar__tile--active:enabled:hover {
+    background-color: #0056b3;
+  }
+  
+  .calendar .react-calendar__tile--hasActive {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .calendar .react-calendar__tile--hasActive:enabled:hover {
+    background-color: #0056b3;
+  }
+  

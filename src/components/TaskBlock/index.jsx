@@ -15,6 +15,7 @@ const TaskBlock = () => {
   ]);
   const [isChecked, setIsChecked] = useState({});
 
+
   const addTask = (task) => {
     setTasks((prevTasks) => {
       const uncheckedTasks = prevTasks.filter((t) => !isChecked[t]);
@@ -36,8 +37,6 @@ const TaskBlock = () => {
   const handleCheckboxChange = (id, task) => {
     setIsChecked((prev) => {
       const newCheckedState = { ...prev, [task]: !prev[task] };
-
-      // Перемещаем выполненные задачи в конец
       const sortedTasks = [...tasks].sort((a, b) =>
         newCheckedState[a] === newCheckedState[b]
           ? 0
@@ -64,6 +63,9 @@ const TaskBlock = () => {
               task={task}
               id={i}
             />
+
+            {console.log(task.deadline)}
+
             <button
               onClick={() => deleteTask(task)}
               className={styles.btnDelete}
