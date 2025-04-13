@@ -35,7 +35,7 @@
 // 7. не сделал!!!
 // {a: 1, b: 2} -> {1: 'a', 2: 'b'}
 
-// 8. не факт что правильно, как сделать через reduceRight?
+// 8.
 // const arr = [1,2,3];
 
 // const newArr = (mass) => {
@@ -44,6 +44,15 @@
 //     }
 // };
 // console.log(newArr(arr));
+
+// const arr = [1,2,3];
+// const newArr = arr.reduceRight((acc, item) => {
+//     console.log(acc)
+//     console.log(item)
+//     acc.push(item)
+//     return acc;
+// }, [])
+// console.log(newArr);
 
 // 9. не сделал!!!
 // [{id: 1, name: 'Tom'}, {id: 2, name: 'Ann'}] -> {1: {name: 'Tom'}, 2: {name: 'Ann'}}
