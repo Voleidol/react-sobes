@@ -1,28 +1,7 @@
-.mainTaskBlock {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-    .textTask {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: space-between;
-        justify-content: space-between;
-
-        .btnDelete {
-            padding: 10px;
-            margin-left: 10px;
-            font-size: 20px;
-            margin-top: 15px;
-        }
-    }
+.taskblockMain {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
 }
