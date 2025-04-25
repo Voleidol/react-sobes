@@ -10,6 +10,7 @@
     position: fixed;
     left: 26%;
     z-index: 999;
+    background-color: white;
 
     .popup {
         display: flex;
@@ -30,6 +31,7 @@
 
         .textareaPopup {
             min-height: 20vh;
+            font-size: 20px;
         }
 
         .popupButton {
@@ -39,6 +41,7 @@
             background-color: aqua;
             width: 40%;
             align-self: center;
+            font-size: 20px;
             
             &:hover {
                 cursor: pointer;

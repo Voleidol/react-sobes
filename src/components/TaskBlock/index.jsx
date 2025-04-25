@@ -4,17 +4,17 @@ import styles from './TaskBlock.module.scss'
 
 const TaskBlock = () => {
   const [shadow, setShadow] = useState(false);
+  const [task, setTask] = useState({})
 
   const changeShadow = () => {
     setShadow(true)
   }
 
   return (
-    <div className={styles.taskblockMain}>
+    <div className={shadow ? styles.taskblockMainShadow : styles.taskblockMain}>
       <h2>ToDo List</h2>
-      <button onClick={() => changeShadow()}>Добавить задачу</button>
-      <Popup shadow={shadow} setShadow={setShadow} />
-      
+      <button className={styles.addTaskBtn} onClick={() => changeShadow()}>Добавить задачу</button>
+      <Popup setTask={setTask} task={task} shadow={shadow} setShadow={setShadow} />
     </div>
   )
 };
