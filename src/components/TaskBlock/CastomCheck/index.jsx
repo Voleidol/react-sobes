@@ -6,19 +6,25 @@ const CastomCheck = ({task, setTask}) => {
       const updateTask = task.map((item) =>
         item.id === id ? { ...item, completed: !item.completed } : item
       );
+      console.log(id)
       setTask(updateTask);
+    };
+
+    const deleteTask = (id) => {
+      const updateTaskDelete = () => task.filter((item) => item.id !==id);
+      setTask(updateTaskDelete);
     };
     
   return (
     <div className={styles.taskList}>
       {task.map((item) => (
-        <div className={styles.containerLabel}>
-          <label key={item.id} label className={styles.castomCheckbox}>
+        <div key={item.id} className={styles.containerLabel}>
+          <label className={styles.castomCheckbox}>
             <input onChange={() => completedTask(item.id)} type="checkbox" />
             <span className={styles.checkMark}></span>
             <span className={`${item.completed ? styles.completedText : ''}`}>{item.text}</span>
           </label>
-          <button className={styles.deleteTask}>Delete</button>
+          <button onClick={() => deleteTask(item.id)} className={styles.deleteTask}>Delete</button>
         </div>
       ))}
     </div>
