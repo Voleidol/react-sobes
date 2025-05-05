@@ -1,12 +1,13 @@
 import { useState } from "react";
 import styles from "./Popup.module.scss";
 
-const Popup = ({ shadow, setShadow }) => {
+const Popup = ({ shadow, setShadow, setTask }) => {
   const [stateText, setStateText] = useState("");
 
   const changeShadow = () => {
     if (stateText) {
       setStateText('')
+      setTask()
       setShadow(!shadow);
     }
   };
