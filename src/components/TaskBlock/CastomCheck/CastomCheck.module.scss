@@ -1,0 +1,62 @@
+.taskList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerLabel {
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .castomCheckbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    gap: 10px;
+    user-select: none;
+  }
+  
+  .castomCheckbox input {
+    display: none; /* Скрываем настоящий чекбокс */
+  }
+  
+  .checkMark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  
+  .castomCheckbox input:checked + .checkMark {
+    background-color: #4caf50; /* Зеленый фон при checked */
+    border-color: #4caf50; /* Зеленая рамка */
+  }
+  
+  .castomCheckbox input:checked + .checkMark::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .deleteTask:hover {
+    cursor: pointer;
+  }
+
+  .completedText {
+    text-decoration: line-through;
+    color: #aaa;
+  }

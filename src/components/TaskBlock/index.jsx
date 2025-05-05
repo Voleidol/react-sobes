@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import Popup from './popup';
 import styles from './TaskBlock.module.scss'
+import CastomCheck from './CastomCheck';
 
 const TaskBlock = () => {
   const [shadow, setShadow] = useState(false);
-  const [task, setTask] = useState({})
+  const [task, setTask] = useState([]);
   console.log(task)
   const changeShadow = () => {
     setShadow(true)
@@ -23,10 +24,18 @@ const TaskBlock = () => {
   return (
     <div className={styles.taskblockMain}>
       <h2>ToDo List</h2>
-      <button className={styles.addTaskBtn} onClick={() => changeShadow()}>Добавить задачу</button>
-      <Popup setTask={setTask} task={task} shadow={shadow} setShadow={setShadow} />
+      <button className={styles.addTaskBtn} onClick={() => changeShadow()}>
+        Добавить задачу
+      </button>
+      <Popup
+        setTask={setTask}
+        task={task}
+        shadow={shadow}
+        setShadow={setShadow}
+      />
+      {task && <CastomCheck task={task} setTask={setTask}/>}
     </div>
-  )
+  );
 };
 
 export default TaskBlock;
