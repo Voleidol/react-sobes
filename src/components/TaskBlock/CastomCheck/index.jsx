@@ -6,7 +6,6 @@ const CastomCheck = ({task, setTask}) => {
       const updateTask = task.map((item) =>
         item.id === id ? { ...item, completed: !item.completed } : item
       );
-      console.log(id)
       setTask(updateTask);
     };
 
