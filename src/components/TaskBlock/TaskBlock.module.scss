@@ -17,3 +17,13 @@
         cursor: pointer;
     }
 }
+
+.headerTaskBlock {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .select {
+        font-size: 15px;
+    }
+}
